@@ -6,7 +6,7 @@ var webpack = require('webpack-stream')
 var webpackConfig = require('./webpack.config.js')
 
 gulp.task('sass', function() {
-  return gulp.src('src/sass/style.+(sass|scss)')
+  return gulp.src('src/sass/main.+(sass|scss)')
     .pipe(sass())
     .pipe(gulp.dest('dist/assets/css/'))
 })
