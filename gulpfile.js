@@ -2,6 +2,9 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var babel = require('gulp-babel')
 
+var webpack = require('webpack-stream')
+var webpackConfig = require('./webpack.config.js')
+
 gulp.task('sass', function() {
   return gulp.src('src/sass/style.+(sass|scss)')
     .pipe(sass())
@@ -15,7 +18,7 @@ gulp.task('sass:watch', function() {
 
 gulp.task('babelify', function() {
   return (gulp.src('src/js/index.js'))
-    .pipe(babel())
+    .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('dist/assets/js/'))
 })
 
