@@ -1,0 +1,21 @@
+{
+  "name": "ghost-gulp-boilerplate",
+  "version": "1.0.0",
+  "description": "Ghost themes with es6, sass, & browserify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ghost",
+    "casper",
+    "theme",
+    "build-step",
+    "gulp",
+    "sass",
+    "es6",
+    "browserify"
+  ],
+  "author": "Henry Baughman",
+  "license": "MIT"
+}
