@@ -1,5 +1,5 @@
 {
-  "name": "ghost-gulp-boilerplate",
+  "name": "ghost-es6-sass-boilerplate",
   "version": "1.0.0",
   "description": "Ghost themes with es6, sass, & browserify",
   "main": "index.js",

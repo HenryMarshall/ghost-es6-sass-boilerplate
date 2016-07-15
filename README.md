@@ -16,3 +16,4 @@ find one. So I built this.
 ## TODO
 - Add [sass-module-importer](https://www.npmjs.com/package/sass-module-importer)
 - Minify/Uglify JS in build process
+- Build `dist/package.json` dynamically from subset of `package.json`
