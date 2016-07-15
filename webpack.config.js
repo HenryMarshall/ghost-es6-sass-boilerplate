@@ -1,10 +1,14 @@
+var webpack = require('webpack')
+
 module.exports = {
+  devtool: 'source-map',
+
   entry: './src/js/index.js',
   output: {
     filename: 'index.js'
   },
   module: {
-    loaders: [ 
+    loaders: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
