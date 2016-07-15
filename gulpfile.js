@@ -1,14 +1,20 @@
 var gulp = require('gulp')
-var sass = require('gulp-sass')
-var babel = require('gulp-babel')
+var sourcemaps = require('gulp-sourcemaps')
 var livereload = require('gulp-livereload')
 
+var cssnano = require('gulp-cssnano')
+var sass = require('gulp-sass')
+
+var babel = require('gulp-babel')
 var webpack = require('webpack-stream')
 var webpackConfig = require('./webpack.config.js')
 
 gulp.task('sass', function() {
   return gulp.src('src/sass/main.+(sass|scss)')
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(cssnano())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/assets/css/'))
     .pipe(livereload())
 })
